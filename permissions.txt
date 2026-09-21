@@ -1,0 +1,37 @@
+# Linux Permissions Configuration
+
+## Developers Directory
+Path: /opt/company-app/developers
+Owner: root
+Group: developers
+Permissions: 770
+
+## Operations Directory
+Path: /opt/company-app/operations
+Owner: root
+Group: operations
+Permissions: 770
+
+## Application File
+Path: /opt/company-app/developers/app.txt
+Owner: root
+Group: developers
+Permissions: 660
+
+## Permission Meaning
+
+770:
+Owner  -> rwx
+Group  -> rwx
+Other  -> ---
+
+660:
+Owner  -> rw-
+Group  -> rw-
+Other  -> ---
+
+## Commands Used
+chown
+chmod
+ls -l
+ls -ld

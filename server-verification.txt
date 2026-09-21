@@ -1,0 +1,45 @@
+===== USERS =====
+uid=1005(rahul) gid=1009(rahul) groups=1009(rahul),1007(developers)
+uid=1006(amit) gid=1010(amit) groups=1010(amit),1007(developers)
+uid=1007(neha) gid=1011(neha) groups=1011(neha),1008(operations)
+
+===== GROUPS =====
+developers:x:1007:rahul,amit,mahesh
+operations:x:1008:neha
+
+===== DIRECTORY PERMISSIONS =====
+drwxrwx---+ 2 root developers 73 Sep 21 19:50 /opt/company-app/developers
+drwxrwx---. 2 root operations 21 Sep 21 19:48 /opt/company-app/operations
+
+===== APPLICATION FILE =====
+-rw-rw----. 1 root developers 69 Sep 21 07:49 /opt/company-app/developers/app.txt
+
+===== ACL =====
+# file: opt/company-app/developers
+# owner: root
+# group: developers
+user::rwx
+group::rwx
+mask::rwx
+other::---
+
+
+===== APACHE =====
+active
+
+===== SSH =====
+active
+
+===== FIREWALL =====
+cockpit dhcpv6-client http ssh
+
+===== DISK =====
+Filesystem           Size  Used Avail Use% Mounted on
+devtmpfs             3.8G     0  3.8G   0% /dev
+tmpfs                3.8G     0  3.8G   0% /dev/shm
+tmpfs                1.5G   12M  1.5G   1% /run
+/dev/mapper/rl-root   26G  7.9G   19G  31% /
+/dev/nvme0n1p1       960M  440M  521M  46% /boot
+tmpfs                1.0M     0  1.0M   0% /run/stratisd/ns_mounts
+tmpfs                765M   96K  765M   1% /run/user/1000
+/dev/sr0              15G   15G     0 100% /mnt

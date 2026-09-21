@@ -1,0 +1,43 @@
+===== APACHE LOGS =====
+Sep 21 20:08:26 localhost.localdomain systemd[1]: Starting The Apache HTTP Server...
+Sep 21 20:08:26 localhost.localdomain httpd[5198]: AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using localhost.localdomain. Set the 'ServerName' directive globally to suppress this message
+Sep 21 20:08:26 localhost.localdomain httpd[5198]: Server configured, listening on: port 80
+Sep 21 20:08:26 localhost.localdomain systemd[1]: Started The Apache HTTP Server.
+
+===== SYSTEM ERRORS =====
+Sep 21 19:45:58 localhost kernel: [Firmware Bug]: cpu 0, try to use APIC520 (LVT offset 2) for vector 0xf4, but the register is already in use for vector 0x0 on this cpu
+Sep 21 19:45:58 localhost kernel: [Firmware Bug]: cpu 1, try to use APIC520 (LVT offset 2) for vector 0xf4, but the register is already in use for vector 0x0 on this cpu
+Sep 21 19:45:58 localhost kernel: [Firmware Bug]: cpu 2, try to use APIC520 (LVT offset 2) for vector 0xf4, but the register is already in use for vector 0x0 on this cpu
+Sep 21 19:45:58 localhost kernel: [Firmware Bug]: cpu 3, try to use APIC520 (LVT offset 2) for vector 0xf4, but the register is already in use for vector 0x0 on this cpu
+Sep 21 19:45:58 localhost kernel: [Firmware Bug]: cpu 4, try to use APIC520 (LVT offset 2) for vector 0xf4, but the register is already in use for vector 0x0 on this cpu
+Sep 21 19:45:58 localhost kernel: [Firmware Bug]: cpu 5, try to use APIC520 (LVT offset 2) for vector 0xf4, but the register is already in use for vector 0x0 on this cpu
+Sep 21 19:45:58 localhost kernel: [Firmware Bug]: cpu 6, try to use APIC520 (LVT offset 2) for vector 0xf4, but the register is already in use for vector 0x0 on this cpu
+Sep 21 19:45:58 localhost kernel: [Firmware Bug]: cpu 7, try to use APIC520 (LVT offset 2) for vector 0xf4, but the register is already in use for vector 0x0 on this cpu
+Sep 21 19:46:13 localhost kernel: piix4_smbus 0000:00:07.3: SMBus Host Controller not enabled!
+Sep 21 19:46:17 localhost alsactl[1104]: alsa-lib main.c:1804:(snd_use_case_mgr_open) [error.ucm] failed to import hw:0 use case configuration -2
+Sep 21 19:46:43 localhost.localdomain gdm-password][2919]: gkr-pam: unable to locate daemon control file
+Sep 21 19:46:50 localhost.localdomain gdm-wayland-session[1775]: GLib: Source ID 2 was not found when attempting to remove it
+Sep 21 19:46:50 localhost.localdomain gdm-launch-environment][1432]: GLib-GObject: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+Sep 21 19:46:51 localhost.localdomain systemd[2932]: Failed to start Application launched by gnome-session-binary.
+
+===== APACHE STATUS =====
+● httpd.service - The Apache HTTP Server
+     Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; preset: disabled)
+     Active: active (running) since Mon 2026-09-21 20:08:26 IST; 53min ago
+       Docs: man:httpd.service(8)
+   Main PID: 5198 (httpd)
+     Status: "Total requests: 6; Idle/Busy workers 100/0;Requests/sec: 0.00188; Bytes served/sec:   3 B/sec"
+      Tasks: 177 (limit: 48527)
+     Memory: 14.6M (peak: 15.5M)
+        CPU: 8.382s
+     CGroup: /system.slice/httpd.service
+             ├─5198 /usr/sbin/httpd -DFOREGROUND
+             ├─5199 /usr/sbin/httpd -DFOREGROUND
+             ├─5200 /usr/sbin/httpd -DFOREGROUND
+             ├─5201 /usr/sbin/httpd -DFOREGROUND
+             └─5203 /usr/sbin/httpd -DFOREGROUND
+
+Sep 21 20:08:26 localhost.localdomain systemd[1]: Starting The Apache HTTP Server...
+Sep 21 20:08:26 localhost.localdomain httpd[5198]: AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using localhost.localdomain. Set the 'ServerName' directive globally to suppress this message
+Sep 21 20:08:26 localhost.localdomain httpd[5198]: Server configured, listening on: port 80
+Sep 21 20:08:26 localhost.localdomain systemd[1]: Started The Apache HTTP Server.

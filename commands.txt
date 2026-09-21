@@ -1,0 +1,55 @@
+# Linux Server Administration Project
+
+# Groups
+sudo groupadd developers
+sudo groupadd operations
+
+# Users
+sudo useradd -m rahul
+sudo useradd -m amit
+sudo useradd -m neha
+
+# Add users to groups
+sudo usermod -aG developers rahul
+sudo usermod -aG developers amit
+sudo usermod -aG operations neha
+
+# Directory creation
+sudo mkdir -p /opt/company-app/developers
+sudo mkdir -p /opt/company-app/operations
+
+# Ownership
+sudo chown root:developers /opt/company-app/developers
+sudo chown root:operations /opt/company-app/operations
+
+# Permissions
+sudo chmod 770 /opt/company-app/developers
+sudo chmod 770 /opt/company-app/operations
+
+# ACL
+sudo setfacl -m u:neha:rwx /opt/company-app/developers
+sudo setfacl -x u:neha /opt/company-app/developers
+
+# Apache
+sudo dnf install httpd -y
+sudo systemctl start httpd
+sudo systemctl enable httpd
+
+# SSH
+sudo systemctl enable sshd
+
+# Firewall
+sudo firewall-cmd --permanent --add-service=http
+sudo firewall-cmd --permanent --add-service=ssh
+sudo firewall-cmd --reload
+
+# Monitoring
+top
+free -h
+df -h
+
+# Logs
+sudo journalctl -u httpd --no-pager -n 20
+
+# Backup
+tar -czvf ~/linux-server-project-backup.tar.gz ~/linux-server-project

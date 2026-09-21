@@ -1,0 +1,22 @@
+# Users and Groups Configuration
+
+## Groups Created
+developers
+operations
+
+## Users Created
+rahul
+amit
+neha
+
+## Group Membership
+rahul -> developers
+amit -> developers
+neha -> operations
+
+## Verification Commands
+id rahul
+id amit
+id neha
+getent group developers
+getent group operations

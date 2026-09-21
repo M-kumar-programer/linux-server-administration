@@ -1,0 +1,31 @@
+# Access Control List (ACL) Configuration
+
+## Directory
+/opt/company-app/developers
+
+## ACL Test
+User: neha
+
+Temporary ACL permission granted:
+read + write + execute (rwx)
+
+Command used:
+sudo setfacl -m u:neha:rwx /opt/company-app/developers
+
+ACL verified using:
+getfacl /opt/company-app/developers
+
+Permission tested using:
+sudo -u neha touch /opt/company-app/developers/neha.txt
+
+## ACL Removed
+Command used:
+sudo setfacl -x u:neha /opt/company-app/developers
+
+After removing ACL, Neha was no longer allowed to create files
+in the developers directory because she was not a member of
+the developers group.
+
+## Commands Used
+setfacl
+getfacl
